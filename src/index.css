@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: Inter-Bold;
+        font-weight: 700;
+        src: url(src/assets/fonts/static/Inter-Bold.ttf) format("woff");
+    }
+    @font-face {
+        font-family: Inter-ExtraBold;
+        font-weight: 800;
+        src: url(src/assets/fonts/static/Inter-ExtraBold.ttf) format("woff");
+    }
+    @font-face {
+        font-family: Inter-Regular;
+        font-weight: 400;
+        src: url(src/assets/fonts/static/Inter-Regular.ttf) format("woff");
+    }
+}
