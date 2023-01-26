@@ -4,6 +4,9 @@ import {Container} from "./components/atoms/Container";
 import {NewArticles} from "./components/molecules/NewArticles";
 import {Typography} from "./components/atoms/Typography";
 import {Title} from "./components/atoms/Title";
+import {Image} from "./components/atoms/Image";
+import ArticleCard from "./components/molecules/ArticleCard";
+import OtherArticles from "./components/organisms/OtherArticles";
 
 const mainArticle = {
     title:"The Bright Future of Web 3.0?",
@@ -54,24 +57,7 @@ function App() {
         <Container>
             <MainArticle article={mainArticle}/>
             <NewArticles news={news}/>
-            <div className="mt-4">
-                {others.map((article) => {
-                    return (
-                        <div className={"flex mt-12 h-36 max-w-xl "}>
-                            <div className={"min-h-full basis-4/12"}>
-                                <img className={"h-full"} src={`src/assets/images/${article.image}`} alt="Images de vieux ordinateurs"/>
-                            </div>
-                            <div className={"flex flex-col justify-between items-start ml-6 basis"}>
-                                <p className={"font-[Inter-ExtraBold] text-4xl text-[#5d5f79]"}>{article.number}</p>
-                                <Title size={"small"} variant={"2"} title={article.title}/>
-                                <Typography content={article.content}/>
-                            </div>
-                        </div>
-
-                    )
-                })}
-
-            </div>
+            <OtherArticles others={others}/>
         </Container>
     </div>
   )
