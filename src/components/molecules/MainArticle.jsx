@@ -1,17 +1,15 @@
 import {Button} from "../atoms/Button";
 import {Image} from "../atoms/Image";
 import {Typography} from "../atoms/Typography";
-import {H1} from "../atoms/H1";
+import {Title} from "../atoms/Title";
 
 export const MainArticle = ({article}) => {
     return (
         <>
             <Image/>
-            <H1 title={article.title}/>
+            <Title title={article.title} size="large" variant={"1"} width={"3/5"}/>
             <Typography content={article.content}/>
-            <Typography content={"Blablablalvba"}/>
             <Button content={"Read more"}/>
-
         </>
     )
 }
